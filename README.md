@@ -18,8 +18,8 @@ Building the basic LED blinky project in visual studio code using CMSIS-Toolbox.
 Refer to **AUGD0012 v1.4 Getting Started with VS Code, GCC and J-Link Using CMSIS Toolbox** available at [AlifSemi.com/](https://alifsemi.com/support/application-notes-user-guides/ensemble/)
 # Steps for building FreeRTOS LED Blinky app in VSCODE(GCC) 
 
-    $ git clone git@github.com:alifsemi/alif_vscode-template.git freertos_blinky
-    $ cd freertos_blinky
+    $ git clone <...>/alifsemidev/alif_vscode_freertos_blinky.git
+    $ cd alif_vscode_freertos_blinky
     $ git submodule init
     $ git submodule update
     $ cpackget add ARM.CMSIS.5.9.0 
@@ -32,21 +32,9 @@ For FreeRTOS applications, do the following changes in FreeRTOSConfig.h file:
     change configRUN_FREERTOS_SECURE_ONLY to 1. 
     change configENABLE_TRUSTZONE to 0.
 
-Copy the **LED_Blinky_testapp.c** into 'app' directory from '<cmsis-packs>\AlifSemiconductor\Ensemble\1.1.1\Boards\DevKit-e7\Templates\FreeRTOS directory'.
-
 # Project Tree
 
 ![image](https://github.com/AlifSemiDev/alif_vscode_freertos_blinky/assets/118854049/bae23be4-e456-415b-905a-b28334472073)
-
-Update the csolution.yaml and cproject.yaml files as shown below. 
-
-csolution.yaml 
-
-![image](https://github.com/AlifSemiDev/alif_vscode_freertos_blinky/assets/118854049/ccf7756e-7cc4-4da4-b56a-db6354ca3f2f)
-
-cproject.yaml 
-
-![image](https://github.com/AlifSemiDev/alif_vscode_freertos_blinky/assets/118854049/b5452cdf-e0da-479c-8767-729cce026424)
  
 # Build
 
