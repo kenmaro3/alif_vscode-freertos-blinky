@@ -1,5 +1,11 @@
 # alif_vscode_freertos_blinky
-An example FreeRTOS based project implemented in VSCode using ARM GNU Embedded toolchain.
+An example FreeRTOS based project implemented in VSCode using ARM GNU Embedded toolchain.   
+This project introduces you to the following aspects of FreeRTOS and VSCode,
+- download the correct CMSIS pack for FreeRTOS using cpackget,
+- configure the csolution.yaml & cproject.yaml files,
+- configure FreeRTOS in the FreeRTOSConfig.h header file,
+- create a thread,
+- schedule the thread.
 
 # Introduction 
 
@@ -42,3 +48,19 @@ Press CTRL+SHIFT+B or F1->Tasks:Run Tasks->Build Project with cbuild
 
 The generated binary cproject.elf can be found in the 'out' directory.
 Run .elf file in Ozone using Jlink debugger.
+
+# Description
+
+This project contains the following important files in the **app** folder,   
+
+**LED_Blinky_testapp.c**:   
+>This file contains main() function which initializes and starts the FreeRTOS kernel.
+We also create a single thread using a call to *xTaskCreate(led_demo_Thread, ...)* which binds the function "*led_demo_thread()*" to the thread.
+Once the thread is successfully created, we start the scheduler using a call to *vTaskStartScheduler()*.  
+  
+**board.h**:  
+>Selects the target development kit for this example. viz (Gen2 DevKit).   
+
+**gcc_M55_HP.ld, gcc_M55_HE.ld**:   
+>Standard Linker files for M55_HP, HE cores.   
+
