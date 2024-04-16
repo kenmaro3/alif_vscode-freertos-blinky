@@ -1,4 +1,4 @@
-# alif_vscode_freertos_blinky
+# VSCode FreeRTOS Example
 An example FreeRTOS based project implemented in VSCode using ARM GNU Embedded toolchain.   
 This project introduces you to the following aspects of FreeRTOS and VSCode,
 - download the correct CMSIS pack for FreeRTOS using cpackget,
