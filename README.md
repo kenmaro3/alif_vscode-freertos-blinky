@@ -21,14 +21,13 @@ Building the basic LED blinky project in visual studio code using CMSIS-Toolbox.
 
     Ozone IDE. 
 
-Refer to **AUGD0012 v1.4 Getting Started with VS Code, GCC and J-Link Using CMSIS Toolbox** available at [AlifSemi.com/](https://alifsemi.com/support/application-notes-user-guides/ensemble/)
+Refer to **AUGD0012 v1.4 Getting Started with VS Code, GCC and J-Link Using CMSIS Toolbox** available at [AlifSemi.com/](https://alifsemi.com/download/AUGD0012)
 # Steps for building FreeRTOS LED Blinky app in VSCODE(GCC) 
 
-    $ git clone <...>/alifsemidev/alif_vscode_freertos_blinky.git
+    $ git clone https://github.com/alifsemi/alif_vscode-freertos-blinky.git --recursive
     $ cd alif_vscode_freertos_blinky
-    $ git submodule init
-    $ git submodule update
-**Note**: If you do the step for "First time pack installation" as described in the User Guide, you don't need to do the following manually.
+
+**Note**: If you do the step for "First time pack installation" as described in the User Guide, you DO NOT need to do the following manually.
 
     $ cpackget add ARM.CMSIS.5.9.0 
     $ cpackget add ARM.CMSIS-FreeRTOS.10.5.1
