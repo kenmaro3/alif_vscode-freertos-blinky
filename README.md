@@ -28,7 +28,8 @@ Refer to **AUGD0012 v1.4 Getting Started with VS Code, GCC and J-Link Using CMSI
     $ cd alif_vscode_freertos_blinky
     $ git submodule init
     $ git submodule update
-# If you do the step for "First time pack installation" as described in the User Guide, you don't need to do the following manually. 
+**Note**: If you do the step for "First time pack installation" as described in the User Guide, you don't need to do the following manually.
+
     $ cpackget add ARM.CMSIS.5.9.0 
     $ cpackget add ARM.CMSIS-FreeRTOS.10.5.1
     $ cpackget add ~/Downloads\AlifSemiconductor.Ensemble.1.1.1.pack    
