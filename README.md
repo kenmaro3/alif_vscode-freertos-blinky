@@ -28,12 +28,13 @@ Refer to **AUGD0012 v1.4 Getting Started with VS Code, GCC and J-Link Using CMSI
     $ cd alif_vscode_freertos_blinky
     $ git submodule init
     $ git submodule update
+# If you do the step for "First time pack installation" as described in the User Guide, you don't need to do the following manually. 
     $ cpackget add ARM.CMSIS.5.9.0 
     $ cpackget add ARM.CMSIS-FreeRTOS.10.5.1
     $ cpackget add ~/Downloads\AlifSemiconductor.Ensemble.1.1.1.pack    
 
 For FreeRTOS applications, do the following changes in FreeRTOSConfig.h file: 
-**Note**: path to FreeRTOSConfig.h file “path/to/new/pack-root/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Config/ARMCM/FreeRTOSConfig.h” 
+**Note**: To find tha path to FreeRTOSConfig.h open bash Terminal window and run echo $CMSIS_PACK_ROOT
 
     change configRUN_FREERTOS_SECURE_ONLY to 1. 
     change configENABLE_TRUSTZONE to 0.
