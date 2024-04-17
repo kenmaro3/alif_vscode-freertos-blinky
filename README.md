@@ -29,7 +29,7 @@ Refer to **AUGD0012 v1.4 Getting Started with VS Code, GCC and J-Link Using CMSI
     $ git submodule init
     $ git submodule update
     $ cpackget add ARM.CMSIS.5.9.0 
-    $ cpackget add ARM.CMSIS-FreeRTOS
+    $ cpackget add ARM.CMSIS-FreeRTOS.10.5.1
     $ cpackget add ~/Downloads\AlifSemiconductor.Ensemble.1.1.1.pack    
 
 For FreeRTOS applications, do the following changes in FreeRTOSConfig.h file: 
