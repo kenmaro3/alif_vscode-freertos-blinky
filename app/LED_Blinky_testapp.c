@@ -35,6 +35,10 @@
 #include "retarget_stdout.h"
 #endif  /* RTE_Compiler_IO_STDOUT */
 
+#if 1 /* comment this out to enable semi-hosting printf. Update the csolution.yaml as well.*/
+    #undef printf
+    #define printf(...)
+#endif 
 
 /*Define for FreeRTOS*/
 #define STACK_SIZE     1024
