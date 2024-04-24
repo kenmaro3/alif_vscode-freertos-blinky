@@ -5,7 +5,10 @@ solution:
       - -Og
       - -fdata-sections
     - Link:
-      - --specs=rdimon.specs
+    # Uncomment rdimon and comment out nosys to enable semi-hosting printf.
+    # Update the Application file with printf as well.
+#      - --specs=rdimon.specs
+      - --specs=nosys.specs
       - --entry=Reset_Handler
       - -Wl,-Map=.map,--cref,-print-memory-usage,--gc-sections,--no-warn-rwx-segments
         # generate linker map
