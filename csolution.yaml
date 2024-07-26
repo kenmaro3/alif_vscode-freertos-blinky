@@ -30,7 +30,7 @@ solution:
       define:
         - "CORE_M55_HP"
   packs:
-    - pack: AlifSemiconductor::Ensemble@1.1.1
+    - pack: AlifSemiconductor::Ensemble@1.2.1
     - pack: ARM::CMSIS@5.9.0
     - pack: ARM::CMSIS-FreeRTOS@10.5.1
   projects:
