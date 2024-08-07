@@ -1,5 +1,8 @@
 # alif_vscode_freertos_blinky
-An example FreeRTOS based project implemented in VSCode using ARM GNU Embedded toolchain.   
+An example FreeRTOS based cmsis-pack project implemented in VSCode environment using ARM GNU Embedded toolchain.
+Example is built on VSCode Getting Started Template [alif_vscode-template](https://github.com/alifsemi/alif_vscode-template)
+The default hardware is Gen 2 Ensemble DevKit.
+
 This project introduces you to the following aspects of FreeRTOS and VSCode,
 - download the correct CMSIS pack for FreeRTOS using cpackget,
 - configure the csolution.yaml & cproject.yaml files,
@@ -9,7 +12,8 @@ This project introduces you to the following aspects of FreeRTOS and VSCode,
 
 # Introduction 
 
-Building the basic LED blinky project in visual studio code using CMSIS-Toolbox. The tools of the CMSIS-Toolbox provide a command-line interface for creating application projects that are based on software packs. 
+Building the basic FreeRTOS LED blinky project in visual studio code using CMSIS-Toolbox, cmsis-csolution. The tools of the CMSIS-Toolbox provide a command-line interface for creating application projects that are based on software packs.
+ARM cmsis-csolution is a VSCode extension which provides GUI for building and configuring the project.
 
 # Tools: 
 
@@ -21,7 +25,8 @@ Building the basic LED blinky project in visual studio code using CMSIS-Toolbox.
 
     Ozone IDE. 
 
-Refer to **AUGD0012 v1.4 Getting Started with VS Code, GCC and J-Link Using CMSIS Toolbox** available at [AlifSemi.com/](https://alifsemi.com/support/application-notes-user-guides/ensemble/)
+Please refer to the template project's [Getting started guide](https://github.com/alifsemi/alif_vscode-template/blob/master/doc/getting_started.md)
+
 # Steps for building FreeRTOS LED Blinky app in VSCODE(GCC) 
 
     $ git clone <...>/alifsemidev/alif_vscode_freertos_blinky.git
@@ -29,30 +34,23 @@ Refer to **AUGD0012 v1.4 Getting Started with VS Code, GCC and J-Link Using CMSI
     $ git submodule init
     $ git submodule update
 # If you do the step for "First time pack installation" as described in the User Guide, you don't need to do the following manually. 
-    $ cpackget add ARM.CMSIS.5.9.0 
+    $ cpackget add ARM.CMSIS.6.0.0 
     $ cpackget add ARM.CMSIS-FreeRTOS.10.5.1
-    $ cpackget add ~/Downloads\AlifSemiconductor.Ensemble.1.1.1.pack    
-
-For FreeRTOS applications, do the following changes in FreeRTOSConfig.h file: 
-**Note**: To find tha path to FreeRTOSConfig.h open bash Terminal window and run echo $CMSIS_PACK_ROOT
-
-    change configRUN_FREERTOS_SECURE_ONLY to 1. 
-    change configENABLE_TRUSTZONE to 0.
+    $ cpackget add ~/Downloads\AlifSemiconductor.Ensemble.1.2.1.pack    
 
 # Project Tree
 
 ![image](https://github.com/AlifSemiDev/alif_vscode_freertos_blinky/assets/118854049/bae23be4-e456-415b-905a-b28334472073)
  
 # Build
-
-Press CTRL+SHIFT+B or F1->Tasks:Run Tasks->Build Project with cbuild
+- Press the build (hammer) icon in cmsis csolution extension.
+- Or Press CTRL+SHIFT+B
+- or F1->Tasks:Run Task->cmsis.csolution.build
 
 The generated binary cproject.elf can be found in the 'out' directory.
 Run .elf file in Ozone using Jlink debugger.
 
 # Description
-
-This project contains the following important files in the **app** folder,   
 
 **LED_Blinky_testapp.c**:   
 >This file contains main() function which initializes and starts the FreeRTOS kernel.
@@ -64,4 +62,3 @@ Once the thread is successfully created, we start the scheduler using a call to 
 
 **gcc_M55_HP.ld, gcc_M55_HE.ld**:   
 >Standard Linker files for M55_HP, HE cores.   
-
