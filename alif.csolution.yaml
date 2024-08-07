@@ -7,6 +7,7 @@ solution:
     - pack: AlifSemiconductor::Ensemble@1.2.1
     - pack: ARM::CMSIS@6.0.0
     - pack: ARM::CMSIS-FreeRTOS@10.5.1
+    - pack: ARM::CMSIS-Compiler@1.0.0
 
   target-types:
     - type: HE
@@ -35,6 +36,7 @@ solution:
   define:
     - UNICODE
     - _UNICODE
+    - asm: __asm #Fix compilation of retarget_syscalls.c
 
   projects:
     - project: blinky/blinky.cproject.yaml
