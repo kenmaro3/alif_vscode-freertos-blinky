@@ -33,12 +33,14 @@
 #include "pinconf.h"
 #if defined(RTE_Compiler_IO_STDOUT)
 #include "retarget_stdout.h"
-#endif  /* RTE_Compiler_IO_STDOUT */
-
-#if 1 /* comment this out to enable semi-hosting printf. Update the csolution.yaml as well.*/
+#else
+#if 0 /* comment this out to enable semi-hosting printf. Update the alif.csolution.yaml as well.*/
     #undef printf
     #define printf(...)
 #endif 
+#endif  /* RTE_Compiler_IO_STDOUT */
+
+
 
 /*Define for FreeRTOS*/
 #define STACK_SIZE     1024
