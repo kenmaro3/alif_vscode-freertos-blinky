@@ -33,15 +33,13 @@ Please refer to the template project's [Getting started guide](https://github.co
     $ cd alif_vscode_freertos_blinky
     $ git submodule init
     $ git submodule update
-# If you do the step for "First time pack installation" as described in the User Guide, you don't need to do the following manually. 
+    
+**If you do the step for "First time pack installation" as described in the User Guide, you don't need to do the following manually.**
+
     $ cpackget add ARM.CMSIS.6.0.0 
     $ cpackget add ARM.CMSIS-FreeRTOS.10.5.1
     $ cpackget add ~/Downloads\AlifSemiconductor.Ensemble.1.2.1.pack    
 
-# Project Tree
-
-![image](https://github.com/AlifSemiDev/alif_vscode_freertos_blinky/assets/118854049/bae23be4-e456-415b-905a-b28334472073)
- 
 # Build
 - Press the build (hammer) icon in cmsis csolution extension.
 - Or Press CTRL+SHIFT+B
