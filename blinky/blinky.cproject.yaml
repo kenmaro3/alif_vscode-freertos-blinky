@@ -9,14 +9,6 @@ project:
         - file: ../libs/board/devkit_gen2/board_init.c
         - file: ../libs/board/appkit_gen2/board_init.c
 
-  linker:
-    - script: gcc_M55_HE.ld
-      for-compiler: GCC
-      for-context: +HE
-    - script: gcc_M55_HP.ld
-      for-compiler: GCC
-      for-context: +HP
-
   output:
     base-name: $Project$
     type:
