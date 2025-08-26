@@ -23,7 +23,7 @@ project:
     # needed for Alif Ensemble support
     - component: AlifSemiconductor::Device:Startup&C Startup
     - component: ARM::CMSIS:CORE
-    - component: ARM::CMSIS:RTOS2:FreeRTOS&Cortex-M
+    - component: ARM::CMSIS:RTOS2:FreeRTOS
     - component: ARM::RTOS&FreeRTOS:Config&CMSIS RTOS2 
     - component: ARM::RTOS&FreeRTOS:Core&Cortex-M 
     - component: ARM::RTOS&FreeRTOS:Coroutines 

@@ -9,7 +9,7 @@ default:
       Link:
         - --specs=nosys.specs
         - --entry=Reset_Handler
-        - -Wl,-Map=linker.map,--cref,-print-memory-usage,--gc-sections,--no-warn-rwx-segments
+        - -Wl,-Map=linker.map,--cref,-print-memory-usage,--gc-sections
         # generate linker map
         # output a cross reference table
         # print memory usage to console
